@@ -1,0 +1,1699 @@
+{
+  "name": "Máquina de Prospecção B2B (esqueleto anonimizado)",
+  "nodes": [
+    {
+      "name": "Filtra sem site",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2416,
+        368
+      ]
+    },
+    {
+      "name": "Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        2928,
+        832
+      ]
+    },
+    {
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3024,
+        304
+      ]
+    },
+    {
+      "name": "Campos Leads",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2608,
+        480
+      ]
+    },
+    {
+      "name": "Pegar o que já existe no DB",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        2816,
+        304
+      ]
+    },
+    {
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        3232,
+        416
+      ]
+    },
+    {
+      "name": "Remove Duplicates",
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 2,
+      "position": [
+        3472,
+        304
+      ]
+    },
+    {
+      "name": "Filter1",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        3472,
+        496
+      ]
+    },
+    {
+      "name": "Puxar nichos",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        512,
+        688
+      ]
+    },
+    {
+      "name": "Conta não contatados",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        512,
+        400
+      ]
+    },
+    {
+      "name": "Avalia estoque",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        400
+      ]
+    },
+    {
+      "name": "Estoque suficiente?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        928,
+        400
+      ]
+    },
+    {
+      "name": "Pausa captação hoje",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        304
+      ]
+    },
+    {
+      "name": "Sticky Estoque",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        448,
+        208
+      ]
+    },
+    {
+      "name": "Puxar localização",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        928,
+        688
+      ]
+    },
+    {
+      "name": "Set Nichos",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        720,
+        688
+      ]
+    },
+    {
+      "name": "Set Local",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        512,
+        880
+      ]
+    },
+    {
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        208
+      ]
+    },
+    {
+      "name": "Pega as que não entrei em contato",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        1232,
+        1536
+      ]
+    },
+    {
+      "name": "Aleatório",
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        1392,
+        1536
+      ]
+    },
+    {
+      "name": "Edita info",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1968,
+        1536
+      ]
+    },
+    {
+      "name": "Envia mensagem no Whatsapp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3360,
+        1536
+      ]
+    },
+    {
+      "name": "Marca como Aguardando resposta",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        3552,
+        1536
+      ]
+    },
+    {
+      "name": "Marca como descartado",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        2944,
+        1920
+      ]
+    },
+    {
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        688,
+        1536
+      ]
+    },
+    {
+      "name": "Function",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        512,
+        1536
+      ]
+    },
+    {
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1168
+      ]
+    },
+    {
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        448,
+        592
+      ]
+    },
+    {
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1328,
+        208
+      ]
+    },
+    {
+      "name": "Sticky Note12",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        688
+      ]
+    },
+    {
+      "name": "Sticky Note13",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        208
+      ]
+    },
+    {
+      "name": "Nada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        960,
+        1424
+      ]
+    },
+    {
+      "name": "Sticky Note16",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        448,
+        1264
+      ]
+    },
+    {
+      "name": "Sticky Note18",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1168,
+        1264
+      ]
+    },
+    {
+      "name": "Sticky Note20",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3120,
+        1264
+      ]
+    },
+    {
+      "name": "Sticky Note25",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1264
+      ]
+    },
+    {
+      "name": "Code1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2160,
+        1536
+      ]
+    },
+    {
+      "name": "Verifica Numero",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2304,
+        1536
+      ]
+    },
+    {
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        176,
+        624
+      ]
+    },
+    {
+      "name": "Check WhatsApp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2784,
+        1344
+      ]
+    },
+    {
+      "name": "Check WhatsApp Result",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2784,
+        1568
+      ]
+    },
+    {
+      "name": "Prepare Body",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2640,
+        1344
+      ]
+    },
+    {
+      "name": "Puxar buscas realizadas",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        720,
+        880
+      ]
+    },
+    {
+      "name": "Monta combinações pendentes",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        928,
+        880
+      ]
+    },
+    {
+      "name": "Tem pendência?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1360,
+        592
+      ]
+    },
+    {
+      "name": "Loop pares",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1600,
+        736
+      ]
+    },
+    {
+      "name": "Conta leads de hoje",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1808,
+        864
+      ]
+    },
+    {
+      "name": "Bateu meta?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2000,
+        864
+      ]
+    },
+    {
+      "name": "Registra no caderno",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        3312,
+        832
+      ]
+    },
+    {
+      "name": "Tudo coberto",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        576
+      ]
+    },
+    {
+      "name": "Loop terminado",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1808,
+        720
+      ]
+    },
+    {
+      "name": "Sticky Fluxo 1 Loop",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Sticky Note27",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2128,
+        1264
+      ]
+    },
+    {
+      "name": "Horários padrão1",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        1536
+      ]
+    },
+    {
+      "name": "Webhook Resposta Evolution",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        96,
+        2496
+      ]
+    },
+    {
+      "name": "Filtra msg do prospect",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        368,
+        2496
+      ]
+    },
+    {
+      "name": "Extrai número",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        608,
+        2496
+      ]
+    },
+    {
+      "name": "Procura lead aguardando",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        832,
+        2496
+      ]
+    },
+    {
+      "name": "Lead encontrado?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1072,
+        2496
+      ]
+    },
+    {
+      "name": "Marca como Conversando",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        1360,
+        2496
+      ]
+    },
+    {
+      "name": "Sticky Fluxo 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        2144
+      ]
+    },
+    {
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1920,
+        1264
+      ]
+    },
+    {
+      "name": "Sticky Note17",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2128,
+        1888
+      ]
+    },
+    {
+      "name": "Meta atingida",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2256,
+        768
+      ]
+    },
+    {
+      "name": "Um por combinação",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        3120,
+        832
+      ]
+    },
+    {
+      "name": "Estado do banco 1x",
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        2608,
+        304
+      ]
+    },
+    {
+      "name": "Parâmetros Receita",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1600,
+        384
+      ]
+    },
+    {
+      "name": "Montar CNPJ + classificar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1952,
+        368
+      ]
+    },
+    {
+      "name": "Alerta Receita falhou",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1952,
+        544
+      ]
+    },
+    {
+      "name": "Buscar no Maps (scraper próprio)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2112,
+        368
+      ]
+    },
+    {
+      "name": "Busca empresas (Receita)",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        1760,
+        384
+      ]
+    },
+    {
+      "name": "Monta apiData",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2272,
+        368
+      ]
+    },
+    {
+      "name": "Maior ordem",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2976,
+        1456
+      ]
+    },
+    {
+      "name": "Gera gancho",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3200,
+        1536
+      ]
+    },
+    {
+      "name": "Debounce 45s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1552,
+        2496
+      ]
+    },
+    {
+      "name": "Gera pitch",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1936,
+        2496
+      ]
+    },
+    {
+      "name": "Envia pitch",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2128,
+        2496
+      ]
+    },
+    {
+      "name": "Estado instâncias",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2496,
+        1344
+      ]
+    },
+    {
+      "name": "Estado instâncias 3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1744,
+        2496
+      ]
+    },
+    {
+      "name": "Loop leads",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1760,
+        1536
+      ]
+    },
+    {
+      "name": "Intervalo 13-42s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3744,
+        1536
+      ]
+    },
+    {
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1712,
+        1264
+      ]
+    },
+    {
+      "name": "Sticky Note26",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        2336
+      ]
+    },
+    {
+      "name": "Sticky Note19",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        288,
+        2336
+      ]
+    },
+    {
+      "name": "Sticky Note21",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1312,
+        2336
+      ]
+    },
+    {
+      "name": "Tem lead hoje?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1088,
+        1536
+      ]
+    },
+    {
+      "name": "Sem lead hoje",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1088,
+        1696
+      ]
+    },
+    {
+      "name": "Conectivos gênero",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3088,
+        1376
+      ]
+    },
+    {
+      "name": "Conectivos gênero 3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1840,
+        2384
+      ]
+    },
+    {
+      "name": "Verifica match",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2352,
+        496
+      ]
+    },
+    {
+      "name": "LS · Cron 10min",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        96,
+        3040
+      ]
+    },
+    {
+      "name": "LS · Todos os leads",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        320,
+        3040
+      ]
+    },
+    {
+      "name": "LS · Índice de leads",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        544,
+        3040
+      ]
+    },
+    {
+      "name": "LS · Conversas (Evolution)",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        768,
+        3040
+      ]
+    },
+    {
+      "name": "LS · Classifica e casa",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        992,
+        3040
+      ]
+    },
+    {
+      "name": "LS · Só o que interessa",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        1216,
+        3040
+      ]
+    },
+    {
+      "name": "LS · Atualiza Notion",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        1424,
+        3040
+      ]
+    }
+  ],
+  "connections": {
+    "Filtra sem site": {
+      "main": [
+        [
+          {
+            "node": "Campos Leads",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Estado do banco 1x",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Estado do banco 1x": {
+      "main": [
+        [
+          {
+            "node": "Pegar o que já existe no DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Campos Leads": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Pegar o que já existe no DB": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Remove Duplicates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Duplicates": {
+      "main": [
+        [
+          {
+            "node": "Filter1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter1": {
+      "main": [
+        [
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion": {
+      "main": [
+        [
+          {
+            "node": "Um por combinação",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Um por combinação": {
+      "main": [
+        [
+          {
+            "node": "Registra no caderno",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Puxar nichos": {
+      "main": [
+        [
+          {
+            "node": "Set Nichos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Puxar localização": {
+      "main": [
+        [
+          {
+            "node": "Set Local",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Nichos": {
+      "main": [
+        [
+          {
+            "node": "Puxar localização",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Local": {
+      "main": [
+        [
+          {
+            "node": "Puxar buscas realizadas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Puxar buscas realizadas": {
+      "main": [
+        [
+          {
+            "node": "Monta combinações pendentes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monta combinações pendentes": {
+      "main": [
+        [
+          {
+            "node": "Tem pendência?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tem pendência?": {
+      "main": [
+        [
+          {
+            "node": "Tudo coberto",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop pares",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop pares": {
+      "main": [
+        [
+          {
+            "node": "Loop terminado",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Conta leads de hoje",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Conta leads de hoje": {
+      "main": [
+        [
+          {
+            "node": "Bateu meta?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bateu meta?": {
+      "main": [
+        [
+          {
+            "node": "Meta atingida",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Parâmetros Receita",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Registra no caderno": {
+      "main": [
+        [
+          {
+            "node": "Loop pares",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pega as que não entrei em contato": {
+      "main": [
+        [
+          {
+            "node": "Tem lead hoje?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tem lead hoje?": {
+      "main": [
+        [
+          {
+            "node": "Aleatório",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sem lead hoje",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aleatório": {
+      "main": [
+        [
+          {
+            "node": "Loop leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edita info": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Verifica Numero",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verifica Numero": {
+      "main": [
+        [
+          {
+            "node": "Estado instâncias",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Marca como descartado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Envia mensagem no Whatsapp": {
+      "main": [
+        [
+          {
+            "node": "Marca como Aguardando resposta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Marca como descartado": {
+      "main": [
+        [
+          {
+            "node": "Loop leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Nada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Pega as que não entrei em contato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Conta não contatados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Conta não contatados": {
+      "main": [
+        [
+          {
+            "node": "Avalia estoque",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Avalia estoque": {
+      "main": [
+        [
+          {
+            "node": "Estoque suficiente?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Estoque suficiente?": {
+      "main": [
+        [
+          {
+            "node": "Pausa captação hoje",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Puxar nichos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check WhatsApp": {
+      "main": [
+        [
+          {
+            "node": "Check WhatsApp Result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check WhatsApp Result": {
+      "main": [
+        [
+          {
+            "node": "Maior ordem",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Marca como descartado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Body": {
+      "main": [
+        [
+          {
+            "node": "Check WhatsApp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Horários padrão1": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook Resposta Evolution": {
+      "main": [
+        [
+          {
+            "node": "Filtra msg do prospect",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtra msg do prospect": {
+      "main": [
+        [
+          {
+            "node": "Extrai número",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrai número": {
+      "main": [
+        [
+          {
+            "node": "Procura lead aguardando",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Procura lead aguardando": {
+      "main": [
+        [
+          {
+            "node": "Lead encontrado?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lead encontrado?": {
+      "main": [
+        [
+          {
+            "node": "Marca como Conversando",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parâmetros Receita": {
+      "main": [
+        [
+          {
+            "node": "Busca empresas (Receita)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Montar CNPJ + classificar": {
+      "main": [
+        [
+          {
+            "node": "Buscar no Maps (scraper próprio)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Buscar no Maps (scraper próprio)": {
+      "main": [
+        [
+          {
+            "node": "Monta apiData",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Busca empresas (Receita)": {
+      "main": [
+        [
+          {
+            "node": "Montar CNPJ + classificar",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Alerta Receita falhou",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monta apiData": {
+      "main": [
+        [
+          {
+            "node": "Verifica match",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Maior ordem": {
+      "main": [
+        [
+          {
+            "node": "Conectivos gênero",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gera gancho": {
+      "main": [
+        [
+          {
+            "node": "Envia mensagem no Whatsapp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Marca como Conversando": {
+      "main": [
+        [
+          {
+            "node": "Debounce 45s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Debounce 45s": {
+      "main": [
+        [
+          {
+            "node": "Estado instâncias 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gera pitch": {
+      "main": [
+        [
+          {
+            "node": "Envia pitch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Estado instâncias": {
+      "main": [
+        [
+          {
+            "node": "Prepare Body",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Estado instâncias 3": {
+      "main": [
+        [
+          {
+            "node": "Conectivos gênero 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop leads": {
+      "main": [
+        [
+          {
+            "node": "Nada",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edita info",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Marca como Aguardando resposta": {
+      "main": [
+        [
+          {
+            "node": "Intervalo 13-42s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Conectivos gênero": {
+      "main": [
+        [
+          {
+            "node": "Gera gancho",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Conectivos gênero 3": {
+      "main": [
+        [
+          {
+            "node": "Gera pitch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verifica match": {
+      "main": [
+        [
+          {
+            "node": "Filtra sem site",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LS · Cron 10min": {
+      "main": [
+        [
+          {
+            "node": "LS · Todos os leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LS · Todos os leads": {
+      "main": [
+        [
+          {
+            "node": "LS · Índice de leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LS · Índice de leads": {
+      "main": [
+        [
+          {
+            "node": "LS · Conversas (Evolution)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LS · Conversas (Evolution)": {
+      "main": [
+        [
+          {
+            "node": "LS · Classifica e casa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LS · Classifica e casa": {
+      "main": [
+        [
+          {
+            "node": "LS · Só o que interessa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LS · Só o que interessa": {
+      "main": [
+        [
+          {
+            "node": "LS · Atualiza Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

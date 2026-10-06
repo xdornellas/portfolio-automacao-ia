@@ -1,0 +1,97 @@
+{
+  "name": "Alerta de visitantes do site, média de 7 dias (esqueleto anonimizado)",
+  "nodes": [
+    {
+      "name": "Schedule 09:00 BRT",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "name": "SSH conta visitas",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "name": "Calcula media 7d",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        680,
+        300
+      ]
+    },
+    {
+      "name": "Tem alerta?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        900,
+        300
+      ]
+    },
+    {
+      "name": "Evolution WhatsApp",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1140,
+        200
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule 09:00 BRT": {
+      "main": [
+        [
+          {
+            "node": "SSH conta visitas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SSH conta visitas": {
+      "main": [
+        [
+          {
+            "node": "Calcula media 7d",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calcula media 7d": {
+      "main": [
+        [
+          {
+            "node": "Tem alerta?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tem alerta?": {
+      "main": [
+        [
+          {
+            "node": "Evolution WhatsApp",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    }
+  }
+}

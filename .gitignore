@@ -1,0 +1,45 @@
+# Este repositório é só documentação. Nada abaixo deveria existir aqui;
+# as regras são uma rede de segurança contra commit acidental de segredos.
+
+# Variáveis de ambiente e credenciais
+.env
+.env.*
+*.env
+credenciais*
+*credentials*
+client_secret*
+*.secret
+secret.*
+secrets.*
+*token*.txt
+*api-key*
+*apikey*
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+id_rsa*
+id_ed25519*
+secrets/
+_secrets/
+_credenciais/
+.ssh/
+
+# Backups e exports brutos
+_backup/
+*.bak
+*.bak-*
+*.sql
+*.dump
+
+# Ambiente local
+.claude/
+.vscode/
+.idea/
+node_modules/
+__pycache__/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
