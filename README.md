@@ -4,6 +4,19 @@
 Mais de 4 anos em mídia paga guiada por dados (Meta Ads e Google Ads).<br>
 Cursando Engenharia de Produção na Univesp.
 
+## Painel ao vivo: automações em números
+
+[![Painel em Power BI com as horas economizadas, execuções, taxa de sucesso e premissas das minhas automações](assets/painel-automacoes.png)](https://app.powerbi.com/view?r=eyJrIjoiMWQ4ODEwYWMtOGQ1MS00MjFlLWIwOGEtYWU3OWM4YTNlMmNjIiwidCI6IjE1ZTY3M2M5LWFlMDItNGNiOS1iNzg1LWRkMzgxOWE2ODk2MCJ9)
+
+**[Abrir o painel ao vivo](https://app.powerbi.com/view?r=eyJrIjoiMWQ4ODEwYWMtOGQ1MS00MjFlLWIwOGEtYWU3OWM4YTNlMmNjIiwidCI6IjE1ZTY3M2M5LWFlMDItNGNiOS1iNzg1LWRkMzgxOWE2ODk2MCJ9)**: horas economizadas, execuções, taxa de sucesso e a premissa de cada automação, com dados reais do n8n (as minhas automações e as que criei para a agência), atualizados a cada hora.
+
+Como foi feito, sem Power BI Desktop e no plano gratuito:
+
+- **Dados:** workflows do n8n resumem as execuções por dia (o da agência lê outro n8n só com permissão de leitura); outro envia as linhas para o Power BI pela API REST, autenticado por OAuth com um app registrado no Microsoft Entra.
+- **Modelo:** modelo semântico criado pela API, com 3 tabelas (fato, automações e calendário), relacionamentos e 20 medidas DAX.
+- **Relatório:** layout escrito como código (formato PBIR, via API do Fabric), tema escuro com paleta validada para daltonismo e fundo desenhado em HTML.
+- **Premissa:** minutos que uma pessoa levaria fazendo a tarefa à mão, por execução com sucesso. É estimativa e aparece no próprio painel.
+
 ## Cases
 
 | # | Case | O que prova | Número principal |
@@ -20,7 +33,7 @@ Cada case segue o mesmo roteiro: problema, solução (com diagrama), ferramentas
 - **Automação:** n8n, webhooks, Evolution API (WhatsApp), Notion API, Baserow
 - **IA:** Claude Code (agentes e tarefas agendadas), Gemini, Groq e OpenRouter, LLM com ferramentas (tool calling), verificação adversarial com múltiplos agentes
 - **Código:** Python (Flask, FastAPI, Playwright), TypeScript e Node.js (Next.js, React), SQL
-- **Dados:** PostgreSQL, Redis, BullMQ
+- **Dados:** PostgreSQL, Redis, BullMQ, Power BI (API REST, DAX, PBIR)
 - **Mídia paga:** Meta Marketing API, Google Ads API
 - **Infraestrutura:** Docker Swarm, Traefik, Portainer, Cloudflare, Linux
 
